@@ -21,16 +21,16 @@ import java.util.*;
 public class SelectionSort {
     public static void main(String[] args) {
         int arg[] = { 8, 3, 7, 6, 5 };
-        for (int i = 0; i < arg.length - 1; i++) {
-            int minimumValue = i;
+        for (int i = 0; i < arg.length; i++) {
+            int minpos = i; // 8
             for (int j = i + 1; j < arg.length; j++) {
-                if (arg[minimumValue] > arg[j]) {
-                    minimumValue = j;
+                if (arg[j] < arg[minpos]) {
+                    minpos = j;
                 }
             }
-            int temp = arg[minimumValue];
-            arg[minimumValue] = arg[i];
-            arg[i] = temp;
+            int temp = arg[i];
+            arg[i] = arg[minpos];
+            arg[minpos] = temp;
         }
 
         System.out.print(Arrays.toString(arg));
