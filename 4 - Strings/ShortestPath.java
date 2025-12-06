@@ -28,7 +28,7 @@ public class ShortestPath {
         }
         long shortDistance = (rootOfElm(x, 2) + rootOfElm(y, 2));
         System.err.println(shortDistance);
-        long distance = rootOfElm(shortDistance, 0.5);
+        // long distance = rootOfElm(shortDistance, 0.5);
         System.out.print(Math.pow(shortDistance, 0.5));
     }
 
