@@ -1,6 +1,9 @@
 /*
  *  TOPIC: ABSTRACT CLASS & ABSTRACT METHOD
  *  ---------------------------------------
+ * 
+ * 
+
  *
  *  ABSTRACT CLASS:
  *  ---------------
@@ -11,6 +14,17 @@
  *      ✓ non-abstract methods (with body)
  *  - Can have constructors (YES! constructors of abstract classes run
  *    when their child class object is created).
+ * 
+ *  WHY TO USE ABSTRACT CLASS?
+ * -----------------------------
+ *  To create a template or blueprint:
+ * 
+ *          1. You want some behavior to be common
+ *          2. You want every subclass to complete specific methods
+ * 
+ *  Example:
+ *          All animals eat → common method
+ *          But all animals walk differently → abstract method
  *
  *  ABSTRACT METHOD:
  *  ----------------
@@ -47,7 +61,7 @@ public class Abstract {
          * its constructor executes FIRST.
          */
         Human h1 = new Human();
-        h1.walk();   // calls Human's overridden walk()
+        h1.walk(); // calls Human's overridden walk()
 
         System.out.println("\n---------------------------------\n");
 
@@ -55,10 +69,10 @@ public class Abstract {
          * Creating Dog object
          * -------------------
          * Calls:
-         *   Animal() → Dog()
+         * Animal() → Dog()
          */
         Dog dg = new Dog();
-        dg.walk();   // calls Dog's overridden walk()
+        dg.walk(); // calls Dog's overridden walk()
     }
 }
 
